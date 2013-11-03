@@ -4,13 +4,11 @@ require 'open-uri'
 
 File.open('DnD.html', 'w') do |x|
 page = Nokogiri::HTML(open("http://www.wizards.com/dnd/Tools.aspx"))
-links = page.css("a[class=ContentBoxLink]")
-links.each do |link|
-#wraps the link in a div, for easier editing
-	x.write("<div>" + link + "</div>\n")
+links = page.css("a")
+links.each do |y|
+	x.write("<div>" + y + "</div>\n")
 	end
 end
-
-#Hey, it does stuff! 
-#Neat!
-#Changes, now it makes the file, but not a useful file that I, or anyone, wants.
+#why on earth doesn't this work.
+#gives link names, and not actual links now, when it was in 
+#block form, and not writing, gave links.
