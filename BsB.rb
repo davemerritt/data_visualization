@@ -4,8 +4,8 @@ require 'open-uri'
 
 
 page = Nokogiri::HTML(open("http://www.backstreetboys.com/events"))
-place = page.css("span[class=venue]")
-time = page.css("span[class=time]")
+place = page.css("span[class=time], span[class=venue]")
+#time = page.css("span[class=time]")
 
 File.open('BsB.html', 'w') do |x|
 	x.puts ("<!DOCTYPE html>")
@@ -21,8 +21,8 @@ File.open('BsB.html', 'w') do |x|
 
 place.each do |y|
 		x.write("<p>" + y +  "</p>\n")         
-	end
 
+	end
 
 	x.puts ("")
 	x.puts ("<h3>I have a short attention span, I am so sorry.</h3>")
@@ -32,4 +32,4 @@ place.each do |y|
 
 end
 #New website! Better website?
-#Needs to make it print times before places.
+#Needs to make it print each time before each place, instead all of each.
