@@ -2,13 +2,27 @@ require 'rubygems'
 require 'nokogiri'
 require 'open-uri'
 
-File.open('DnD.html', 'w') do |x|
+
 page = Nokogiri::HTML(open("http://www.wizards.com/dnd/Tools.aspx"))
 links = page.css("a")
-links.each do |y|
-	x.write("<div>" + y + "</div>\n")
+
+File.open('DnD.html', 'w') do |x|
+	x.puts ("<html>")
+	x.puts ("<head>")
+	x.puts ("<title>DnD Links</title>")
+	x.puts ("</head>")
+	x.puts ("<body>")
+	x.puts ("<h1>Tools, Magazines, and other Information for DnD</h1>")
+	x.puts ("")
+
+links.each do |href|
+		x.write("<div>" + href + "</div>\n")        
 	end
+
+	x.puts ("</body>")
+	x.puts ("</html>")
+
 end
-#why on earth doesn't this work.
-#gives link names, and not actual links now, when it was in 
-#block form, and not writing, gave links.
+#I want it to put all the html formatting in, and just end up with a 
+#straightforward list of links to the information.
+#Working on making it looks right, then I'll figure out why the links aren't links. 
