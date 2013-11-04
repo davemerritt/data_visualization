@@ -1,0 +1,23 @@
+body { 
+	font-family: Courier;
+	background-color: #e2e5eb;
+}
+
+h1 {
+	color: #8C99B2;
+	border-bottom: dashed #CCC 2px;
+}
+
+h3 {
+	color:#8C99B2;
+	border-bottom: dashed #CCC 2px;
+}
+
+p {
+	color: #707a8e;
+}
+
+span {
+	color: #8C99B2;
+	font-size: .5em
+}
