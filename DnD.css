@@ -1,3 +1,17 @@
-div {
+body { 
+	color: #8C99B2;
+	font-family: Courier;
+}
+
+h1 {
+	color: #4787FF;
+}
+
+p {
 	color: #CCC;
+}
+
+span {
+	color: #CCC;
+	font-size: .4em
 }
