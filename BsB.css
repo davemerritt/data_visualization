@@ -14,10 +14,13 @@ h3 {
 }
 
 p {
+	border: solid #CCC 2px;
+	background-color: #edeff3;
 	color: #707a8e;
+
 }
 
-span {
+span  {
 	color: #8C99B2;
 	font-size: .5em
 }
